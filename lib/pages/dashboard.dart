@@ -10,6 +10,9 @@ class Dashboard extends StatelessWidget {
         title: Text('AGSMEIS Dashboard'),
       ),
       body: SingleChildScrollView(
+        physics: AlwaysScrollableScrollPhysics(
+          parent: BouncingScrollPhysics(),
+        ),
         child: Container(
           height: MediaQuery.of(context).size.height,
           margin: EdgeInsets.symmetric(horizontal: 12.0, vertical: 20.0),
