@@ -19,7 +19,7 @@ class LoginScreen extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(bottom: 16.0),
                         child: Text(
-                          'login to your account',
+                          'Login to your account',
                           style: TextStyle(
                               fontSize: 28.0,
                               color: Color(0xff333333),
@@ -27,7 +27,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 48.0),
+                        padding: const EdgeInsets.only(bottom: 36.0),
                         child: Text(
                             'Enter your name, email address and create a password to sign up',
                             style: TextStyle(
@@ -35,13 +35,6 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-                // SizedBox(
-                //   height: 3.0,
-                // ),
-
-                SizedBox(
-                  height: 32.0,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -107,7 +100,7 @@ class LoginScreen extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 32.0,
+                  height: 48.0,
                 ),
                 SizedBox(
                   width: double.infinity,
