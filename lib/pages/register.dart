@@ -4,43 +4,38 @@ class Register extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
       body: SafeArea(
-          child: SingleChildScrollView(
-                      child: Container(
-                    width: MediaQuery.of(context).size.height,
+        child: SingleChildScrollView(
+          child: Container(
+            width: MediaQuery.of(context).size.height,
             padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 0.0),
             margin: EdgeInsets.only(top: 32.0),
             child: Column(
               children: <Widget>[
                 Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 16.0),
-                          child: Text(
-                            'Create an account',
-                            style: TextStyle(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 16.0),
+                        child: Text(
+                          'Create an account',
+                          style: TextStyle(
                               fontSize: 28.0,
                               color: Color(0xff333333),
-                              fontWeight: FontWeight.bold
-                            ),
-                            ),
+                              fontWeight: FontWeight.bold),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 48.0),
-                          child: Text(
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 48.0),
+                        child: Text(
                             'Enter your name, email address and create a password to sign up',
                             style: TextStyle(
-                              fontSize: 18.0,
-                              color: Color(0xff767676)
-                            )
-                            ),
-                        ),
-                      ],
-                    ),
+                                fontSize: 18.0, color: Color(0xff767676))),
+                      ),
+                    ],
                   ),
+                ),
                 // SizedBox(
                 //   height: 3.0,
                 // ),
@@ -56,19 +51,21 @@ class Register extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                  height: 18.0,
-                ),
+                      height: 18.0,
+                    ),
                     TextFormField(
-                  decoration: InputDecoration(
-                    focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xff00a159), width: 2.0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xff00a159), width: 0.8),
-                  ),
-                  hintText: 'First name, last name',
-                  ),
-                ),
+                      decoration: InputDecoration(
+                        focusedBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Color(0xff00a159), width: 2.0),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Color(0xff00a159), width: 0.8),
+                        ),
+                        hintText: 'First name, last name',
+                      ),
+                    ),
                   ],
                 ),
                 SizedBox(
@@ -86,17 +83,19 @@ class Register extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                  height: 18.0,
-                ),
+                      height: 18.0,
+                    ),
                     TextFormField(
                       decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xff00a159), width: 2.0),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xff00a159), width: 0.8),
-                      ),
-                      hintText: 'Example@gmail.com',
+                          borderSide:
+                              BorderSide(color: Color(0xff00a159), width: 2.0),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Color(0xff00a159), width: 0.8),
+                        ),
+                        hintText: 'Example@gmail.com',
                       ),
                       keyboardType: TextInputType.emailAddress,
                     ),
@@ -117,49 +116,49 @@ class Register extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                  height: 18.0,
-                ),
+                      height: 18.0,
+                    ),
                     TextFormField(
-                        decoration: InputDecoration(
-                          focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Color(0xff00a159), width: 2.0),
+                      decoration: InputDecoration(
+                        focusedBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Color(0xff00a159), width: 2.0),
                         ),
                         enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Color(0xff00a159), width: 0.8),
+                          borderSide:
+                              BorderSide(color: Color(0xff00a159), width: 0.8),
                         ),
                         hintText: '*********',
-                        ),
-                        obscureText: true,
-                        
                       ),
+                      obscureText: true,
+                    ),
                   ],
                 ),
                 SizedBox(
                   height: 32.0,
                 ),
                 SizedBox(
-                   width: double.infinity,
-                    child: Container(
+                  width: double.infinity,
+                  child: Container(
                     color: Color(0xffe5ed98),
                     child: FlatButton(
-                      onPressed: null,
-                      
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/login');
+                      },
                       child: Text(
                         'REGISTER',
                         style: TextStyle(
                           fontSize: 18.0,
-                          color:Color(0xff333333),
+                          color: Color(0xff333333),
                         ),
-                        ),
-                      
+                      ),
                     ),
                   ),
                 ),
-                
               ],
             ),
-        ),
           ),
+        ),
       ),
     );
   }

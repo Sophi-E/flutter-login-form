@@ -107,7 +107,8 @@ class LoginScreen extends StatelessWidget {
                   child: Container(
                     color: Color(0xffe5ed98),
                     child: FlatButton(
-                      onPressed: null,
+                      onPressed: () =>
+                          Navigator.pushNamed(context, '/dashboard'),
                       child: Text(
                         'LOGIN',
                         style: TextStyle(
